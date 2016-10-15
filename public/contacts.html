@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/w3.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+<style>
+* {box-sizing:border-box}
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<body class="body-class">
+
+<header>
+
+  <ul class="topnav" id="myTopnav">
+  <li class="logo_link">  <h1 onclick="gotoHome()"> DENNIS BARTHOLOMEW<h1>  </li> 
+  <li><a href="overview.html">OVERVIEW</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  <li><a href="services.html">SERVICES</a></li>
+  <li><a class="active-menu" href="contacts.html">CONTACTS</a></li>
+  <li><a href="blog.html">BLOG</a></li>
+
+
+
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+  </li>
+</ul>
+
+</header>
+
+
+<section class="mySlides-main">
+
+<h1 class="text-overlay"> CONTACTS </h1>
+
+
+
+
+
+</section>
+
+<section class="contact-area-section">
+
+
+<div class="col-sm-6">
+
+<h1> How can we work together? </h1> 
+
+
+<h3> Please fill out the form with some information about your project.  This will allow us to effectively respond. </h3> 
+
+<img src="/images/template-images/travel-screenshot.png" style="width:100%"> 
+
+
+</div>
+
+
+<div class="row">
+  
+  <div class="col-sm-6">
+
+    <form class="form-horizontal" role="form" name="contactForm" novalidate data-ng-model="contactForm">
+
+  <div class="form-group">
+ 
+  
+    <div class="col-sm-12">
+
+      <label> Your name (required) </label> 
+      <input type="text" class="form-control" id="name" required data-ng-model="name" name="name"> 
+    </div>
+
+
+
+
+  </div>
+  <div class="form-group">
+   
+    <div class="col-sm-12"> 
+
+        <label> Your email (required) </label> 
+
+      <input type="email" class="form-control" id="email"  required name="email" data-ng-model="email">
+    </div>
+
+ 
+
+
+  </div>
+    <div class="form-group">
+   
+    <div class="col-sm-12"> 
+
+       <label> Company Name </label> 
+
+      <input type="text" class="form-control form_field" id="firm"  data-ng-model="firm">
+    </div>
+  </div>
+    <div class="form-group">
+   
+    <div class="col-sm-12"> 
+
+       <label> Website </label> 
+
+      <input type="text" class="form-control form_field" id="website"  data-ng-model="website">
+    </div>
+  </div>
+  
+
+    <div class="form-group">
+   
+    <div class="col-sm-12"> 
+
+       <label> Telephone </label> 
+
+      <input type="text" class="form-control form_field" id="phone"  data-ng-model="phone">
+    </div>
+  </div>
+
+
+<div class="form-group">
+   
+    <div class="col-sm-12"> 
+
+      <label> Service Required </label> 
+
+     <div class="checkbox">
+  <label><input type="checkbox" value=""> Ethinicity Consultation </label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value=""> Diversity Consultation</label>
+</div>
+
+
+
+    </div>
+  </div>
+
+
+  
+<div class="form-group">
+   
+    <div class="col-sm-12"> 
+
+      <label>Tell us the key points about your project</label>
+     <textarea class="form-control" rows="5" id="message" data-ng-model="message"></textarea>
+    </div>
+  </div>
+
+
+
+  <div class="form-group"> 
+     <div class="col-sm-8"> </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-default contact-us-button " id="send_button" data-ng-click="contact_form_submission()" 
+
+       data-ng-disabled="contactForm.name.$invalid || contactForm.email.$invalid"
+
+      > Submit</button>
+    
+
+    </div>
+
+  </div>
+
+</form>
+
+</div>
+
+
+ 
+</div>
+
+
+
+  
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer >
+
+  <div class="row">
+
+ <div class="col-sm-3">  
+
+<h6 class="footer_title"> CONTACT US  </h6>
+</br>
+<h4> DENNIS BARTHOLOMEW</h4>
+<p>71 Wiltshire Road, Croydon CR7 7QP </p> 
+<p>+447880900087</p>
+<p><a href="mailto:dennisbartholomew2003@yahoo.co.uk"> dennisbartholomew2003@yahoo.co.uk</a> </p>
+
+</br>
+<div class="row iconset">
+  
+  <div class="col-sm-12"> 
+
+ <img  src="/images/social-media/facebook.png"> <img  src="/images/social-media/twitter.png"> <img  src="/images/social-media/linkedIn.png">
+
+  </div>
+
+</div>
+ </div>
+
+
+
+  <div class="col-sm-3">  
+
+<h6 class="footer_title">LATEST BLOG </h6>
+
+         <br>
+
+         <section >
+
+         <div class="row">
+         <div class="col-sm-12" >
+         <ul id="recent_blog_posts">
+
+
+         </ul>
+
+         </div>
+        
+        
+        
+         </div>
+
+        </section>
+
+ </div>
+  <div class="col-sm-3">  
+
+  	<h6 class="footer_title"> SITE MAP </h6>
+
+<ul>
+
+  <li><a href="overview.html">OVERVIEW</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  <li><a href="services.html">SERVICES</a></li>
+  <li><a class="active-footer-menu"  href="contacts.html">CONTACTS</a></li>
+  <li><a href="blog.html">BLOG</a></li>
+
+
+</ul>
+
+
+
+</div>
+
+  <div class="col-sm-3" >  
+
+<h6 class="footer_title"> SIGN UP TO OUR NEWSLETTER </h6>
+
+<p style="padding-bottom:20px;font-size:small;">Missed us when we’re away? Add your email below so we can update you on news and related articles.</p>
+
+<form action="" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" validate  role="form">
+
+
+<div class="input-group" style="padding-bottom:20px;">
+
+<input type="email" class="form-control" placeholder="Please enter your email address" name="subscribers_email">
+
+<span class="input-group-btn">
+<button class="btn btn-secondary" type="button" onclick="document.getElementById('mc-embedded-subscribe-form').submit();">
+<span class="glyphicon glyphicon-triangle-right" aria-hidden="true">
+</button>
+</span>
+</div>
+
+</form>
+
+   </div>
+
+</div>
+
+</footer>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides-Design");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<script>
+
+
+
+$(document).ready(function(){
+  
+
+  alert('s');
+
+
+});
+
+
+
+</script>
+
+<script src="/javascripts/main.js" ></script>
+
+<script src="/bootstrap/dist/js/bootstrap.min.js" ></script>
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+</body>
+</html>
