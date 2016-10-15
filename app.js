@@ -20,6 +20,63 @@ app.get('/', function (req, res) {
 
 app.use(express.static('bower_components'));
 
+var nodemailer = require('nodemailer');
+
+
+app.get('/api/contact', function (req, res) {
+
+ 
+
+
+
+      var transporter = nodemailer.createTransport({
+        service: 'hotmail',
+        auth: {
+            user: 'machelslack@hotmail.com', 
+            pass: '321123ETz@'
+        }
+
+    });
+
+var message = "<p>Hello Dennis, </p> <p> You have a new Inquiry </p><p>FIRM: "+req.query.firm+"</p><p>CONTACT: "+req.query.name+"</p><p>PHONE: "+req.query.phone+"</p><p>EMAIL: "+req.query.email+"</p><p>WEBSITE: "+req.query.webiste+"</p><p>MESSAGE: "+req.query.message+"</p>";
+
+
+
+
+var mailOptions = {
+
+    from:req.query.email,
+    to:"dennisbartholomew2003@yahoo.co.uk",
+    subject:"New Inquiry", 
+    text: message,
+    html: message, 
+   
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+
+    if(error){
+
+		var response = {"ERROR":error};
+        
+       res.json(response);
+
+        return console.log(error);
+    }
+    
+
+
+       var response = {"ERROR":"Your message has been sent and some will contact you shortly"};
+        
+       res.json(response);
+
+});
+
+
+
+      })
+
+
 
 
 

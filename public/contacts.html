@@ -104,7 +104,7 @@
 }
 </style>
 
-<body class="body-class">
+<body class="body-class" ng-app="consulatancyapp" ng-controller="consulatancycontroller">
 
 <header>
 
@@ -125,7 +125,6 @@
 
 </header>
 
-
 <section class="mySlides-main">
 
 <h1 class="text-overlay"> CONTACTS </h1>
@@ -140,6 +139,14 @@
 
 
 <div class="col-sm-6">
+
+
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
 
 <h1> How can we work together? </h1> 
 
@@ -433,21 +440,7 @@ function showSlides(n) {
 </script>
 
 
-<script>
 
-
-
-$(document).ready(function(){
-  
-
-  alert('s');
-
-
-});
-
-
-
-</script>
 
 <script src="/javascripts/main.js" ></script>
 
@@ -459,12 +452,47 @@ $(document).ready(function(){
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+<script src="/angular/angular.min.js" ></script>
 
+<script src="/angular-resource/angular-resource.min.js" ></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
 
+angular.module('consulatancyapp', []).controller('consulatancycontroller', function($scope) {
+  
+    $scope.names = [
+        {name:'Jani',country:'Norway'},
+        {name:'Hege',country:'Sweden'},
+        {name:'Kai',country:'Denmark'}
+    ];
+$scope.contact_form_submission = function(){
+
+
+$http.get("http://localhost:3000/api/contact/?name="+$scope.name+"&email="+$scope.email+"&phone="+$scope.phone+"&firm="+$scope.firm+"&website="+$scope.website+"&message="+$scope.message)
+    .then(function(response) {
+       alert(response.ERROR);
+
+$scope.name = "";
+$scope.phone = "";
+$scope.email = "";
+$scope.message = "";
+$scope.firm = "";
+$scope.website = "";
+
+
+
+
+    });
+
+}
+
+
+
+});
+</script>
 </body>
 </html>
