@@ -104,17 +104,26 @@
 }
 </style>
 
+<!--- HERE IS THE CONTENT THAT IS DISPLAYED ON YOUR PAGE -->
+
 <body class="body-class" ng-app="consulatancyapp" ng-controller="consulatancycontroller">
+
+<header style="z-index:999;">
+   
+   <div style="float:right;" id="google_translate_element"></div>
+
+</header>
+
 
 <header>
 
   <ul class="topnav" id="myTopnav">
  <li class="logo_link"> <a href="index.html" ><img src="/images/logo_new.png" class="logo" ></a> </li>  
-  <li><a href="overview.html">OVERVIEW</a></li>
+     <li><a href="index.html">HOME</a></li><li><a href="overview.html">OVERVIEW</a></li>
   <li><a href="about.html">ABOUT</a></li>
   <li><a href="services.html">SERVICES</a></li>
   <li><a class="active-menu" href="contacts.html">CONTACTS</a></li>
-  <li><a href="blog.html">BLOG</a></li>
+  <li><a href="blog.html">BLOG</a></li><li> <i class="fa fa-search" style="font-size:18px;color:black"></i></li>
 
 
 
@@ -122,7 +131,22 @@
     <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
   </li>
 </ul>
+<div class="google-search"> 
 
+  <script>
+  (function() {
+    var cx = '011552907468175526779:7-yi_zjnh8c';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+</div>
 </header>
 
 <section class="mySlides-main">
@@ -352,10 +376,10 @@
 
 <ul>
 
-  <li><a href="overview.html">OVERVIEW</a></li>
-  <li><a href="about.html">ABOUT</a></li>
+  <li><a  href="overview.html">OVERVIEW</a></li>
+  <li><a class="active-footer-menu"  href="about.html">ABOUT</a></li>
   <li><a href="services.html">SERVICES</a></li>
-  <li><a class="active-footer-menu"  href="contacts.html">CONTACTS</a></li>
+  <li><a href="contacts.html">CONTACTS</a></li>
   <li><a href="blog.html">BLOG</a></li>
 
 
@@ -369,7 +393,7 @@
 
 <h6 class="footer_title"> SIGN UP TO OUR NEWSLETTER </h6>
 
-<p style="padding-bottom:20px;font-size:small;">Missed us when we’re away? Add your email below so we can update you on news and related articles.</p>
+<p style="padding-bottom:20px;font-size:small;">Add your email below so we can update you on news and related articles.</p>
 
 <form action="//sinopiainn.us12.list-manage.com/subscribe/post?u=bfd67fe6d111372ab18c5a6a4&amp;id=282315bb50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
@@ -487,5 +511,25 @@ $scope.website = "";
 
 });
 </script>
+<script>
+
+
+$(document).ready(function(){
+
+ $(".google-search").hide();
+
+
+ $(".fa-search").click(function(){
+        $(".google-search").slideToggle("slow");
+    });
+
+
+
+
+});
+
+
+</script>
+
 </body>
 </html>

@@ -1,12 +1,51 @@
 .iconset img {width:30px ; height:30px;}
 
+.fa-search { cursor:pointer;
+
+}
+
+.fa-search:hover { color:red!important;
+
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+
+
+.google-search{
+
+      color:black!important;z-index:100!important;
+
+    }
+
+#google_translate_element {
+
+padding:10px;
+
+
+}
+
+
 .body-class {
 
  
   background-color:#f0f0f1;
 
+  font-family: "Trebuchet"!important;
+
 }
 
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Tahoma"!important;font-weight:200!important;
+}
+
+
+
+p {
+    font-family: "Trebuchet"!important;
+}
 
 .about-us-button{
 
@@ -65,7 +104,7 @@ padding:30px 30px 0px 30px;
 }
 
 
-.services-us-home-page-col h4{
+.services-us-home-page-col h5{
 
 font-weight:400;
 color:black;
@@ -74,7 +113,7 @@ cursor:pointer;
 }
 
 
-.services-us-home-page-col h4:hover{
+.services-us-home-page-col h5:hover{
 
 
 color:red;
@@ -310,9 +349,9 @@ ul.how-it-works {list-style-type:decimal;}
 .topnav{  list-style-type: none; color:white; margin: 0; padding: 0; overflow: hidden; text-align:left; line-height: 100% !important;}
 
 
-ul.topnav li.icon {display: none;}
+ul.topnav li.icon {display: none;margin-top:20px;}
 /*ul.topnav li:first-child{ width:60%; text-align: left !important; }*/
-ul.topnav li:first-child{ width:60%;text-align: left !important;}
+ul.topnav li:first-child{ width:55%;text-align: left !important;}
 
 ul.topnav li { display: inline-block;  vertical-align:middle; }
 

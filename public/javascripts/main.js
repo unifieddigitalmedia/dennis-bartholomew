@@ -355,3 +355,17 @@ angular.module('consulatancyapp', []).controller('consulatancycontroller', funct
     ];
 });
 
+
+$(document).ready(function(){
+
+ $(".google-search").hide();
+
+
+ $(".fa-search").click(function(){
+        $(".google-search").slideToggle("slow");
+    });
+
+
+
+
+});
