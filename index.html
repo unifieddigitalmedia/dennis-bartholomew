@@ -7,6 +7,105 @@
 <link rel="stylesheet"  href="/stylesheets/google-font-face.css">
 <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 <style>
+#description{
+
+
+  color:white;
+
+  font-size:100%;
+font-weight:300;
+ line-height: 150%;
+
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: auto; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    margin:0 auto;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
 * {box-sizing:border-box}
 
 .mySlides {display:none}
@@ -180,7 +279,10 @@
 
   <h1>ABOUT US</h1>
 
-  <p>Dennis Bartholomew designs and delivers equality and diversity packages to enterprises and organisations. </p>
+  <p>Diversity Specialists are experts in the designs and delivers of equality & diversity packages to enterprises and organisations.  Made up of diversity professionals, with expertise and experience in business, the charity sector and public service, they can bring benefits to your organisation through the effective use of best practice and innovation in the filed of equalities. </br>
+
+  Take a few seconds to complete the contact form, <a href="contacts.html" style="color:red;"> here </a> , that will put is on the road to helping you.
+  </p>
 
 
   <button class="btn btn-default about-us-button" onclick="gotoAbout()"> READ MORE</button>
@@ -195,18 +297,15 @@
 
  <div class="row" style="margin:0px!important;">
   
-  <div class="col-sm-6 ">
 
-  <h5  onclick="gotoServices()">EQUALITY CONSULTATION</h5>
 
-  <p>Dennis Bartholomew designs and delivers equality and diversity packages to enterprises and organisations. </p>
-
-  </div>
-
-<div class="col-sm-6 ">
+<div class="col-sm-12 ">
    <h5 onclick="gotoServices()">DIVERSITY CONSULTATION</h5>
 
-  <p>Dennis Bartholomew designs and delivers equality and diversity packages to enterprises and organisations. </p>
+  <p>The role of a dynamic corporate leader is to grow their business through the efficient development of their services.  To do so they have to ensure that their customers are open and able to access their products and services.
+ </p>
+
+ <button class="btn btn-default about-us-button" onclick="gotoAbout()"> READ MORE</button>
 
  </div>
   </div>
@@ -238,7 +337,9 @@
 
 
 
-<h3> SEE EXAMPLES OF THE SUCCESSFUL APPLICATION</h3>
+<h3> THE SUCCESSFUL APPLICATION OF DIVERSITY AND INCLUSION INITIATIVES
+
+</h3>
 
 </br>
 <section>  
@@ -246,55 +347,88 @@
 
 <div class="slideshow-container">
 
+
 <div class="mySlides-Design ">
   <div class="numbertext">1 / 3</div>
  <div class="row">
   
-  <div class="col-sm-3"> <a href="/free-templates/Blog-Template.html" >  <img src="/images/template-images/blog-screenshot.png" style="width:100%">  </a> </div>
+  <div class="col-sm-3">  <img src="/images/template-images/blog-screenshot.png" style="width:100%" onclick="showProject(this)" alt="Created an effective framework of inclusion that resulted in the effective recruitment of staff at all levels; expanded the understanding of equality across the organisation; and saw Sutton’s score for effective use of resources rise from a low base to the top of the table.
 
-  <div class="col-sm-3">   <a href="/free-templates/House-Design-Template.html" ><img src="/images/template-images/housescrrenshot.png" style="width:100%"> </a></div>
+Supported the introduction of a web-based performance management tool for diversity & inclusion that provided real time information to business managers and planners.
 
-  <div class="col-sm-3">   <a href="/free-templates/Marketing-Template.html" ><img src="/images/template-images/marketing-consultant-screenshot.png" style="width:100%"> </a></div>
+Drafted and secured approval of a comprehensive plain English diversity policy for the Borough." style="cursor:pointer!important">  
 
-  <div class="col-sm-3">   <a href="/free-templates/Parallax-Template.html" ><img src="/images/template-images/paralax-screenshot.png" style="width:100%"> </a></div>
+<h6> The London Borough of Sutton </h6>
+  </div>
+
+  <div class="col-sm-3">  <img src="/images/template-images/housescrrenshot.png" style="width:100%" onclick="showProject(this)" alt="Through the effective and imaginative use of law, an initiative was undertaken by a London Council that saw proper employment offered to more than 90 persons that had varying degrees of learning disabilities. 
+"> 
+
+<h6> Mencap </h6>
+
+  </div>
+
+  <div class="col-sm-3">  <img src="/images/template-images/marketing-consultant-screenshot.png" style="width:100%" onclick="showProject(this)" alt="Created an effective network of regional equality bodies that supported the work of local Citizens Advice Bureaux.  
+
+Developed and strengthened the organisation’s inclusion groups at the national and regional level, including the Women’s Group, the Disabled Workers Group, the Black Worker’s Group and the LGBT Forum.
+"> 
+<h6> Citizens Advice </h6>
+  </div>
+
+  <div class="col-sm-3">   <img src="/images/template-images/paralax-screenshot.png" style="width:100%" onclick="showProject(this)" alt="Assisted in the growth of services provided by this South London based mental health charity, thereby enabling it to secure additional funding.
+
+London Borough of Richmond upon Thames
+
+Established an effective staffing group for LGBT, disabled and BAME employees.
+
+The Republic of Sierra Leone
+
+Wrote numerous policies on community peace and the avoidance f inter-ethic conflict for the Ministry of the Interior.
+"> 
+<h6> The Fanon Trust </h6>
+  </div>
 
 </div>
 </div>
 
-<div class="mySlides-Design ">
+<div class="mySlides-Design">
   <div class="numbertext">2 / 3</div>
   
 
 <div class="row">
 
-  <div class="col-sm-3">  <a href="/free-templates/Marketing-Website.html" > <img src="/images/template-images/marketing-website-screenshot.png" style="width:100%"> </a></div>
+  <div class="col-sm-3">  <img src="/images/template-images/marketing-website-screenshot.png" style="width:100%" onclick="showProject(this)" alt="Established an effective staffing group for LGBT, disabled and BAME employees.
+"> 
 
-  <div class="col-sm-3">  <a href="/free-templates/Photo-Template.html" > <img src="/images/template-images/photo-screenshot.png" style="width:100%"> </a></div>
+<h6> London Borough of Richmond upon Thames
+ </h6>
+  </div>
 
-  <div class="col-sm-3">  <a href="/free-templates/Portfolio-Template.html" > <img src="/images/template-images/portfolio-screenshot.png" style="width:100%"></a> </div>
+  <div class="col-sm-3">   <img src="/images/template-images/photo-screenshot.png" style="width:100%" onclick="showProject(this)" alt="Wrote numerous policies on community peace and the avoidance f inter-ethic conflict for the Ministry of the Interior."> 
 
-  <div class="col-sm-3">  <a href="/free-templates/Social-Media-Template.html" > <img src="/images/template-images/social-screenshot.png" style="width:100%"> </a></div>
+<h6> The Republic of Sierra Leone
+</h6>
+
+  </div>
+
+  <div class="col-sm-3">   <img src="/images/template-images/portfolio-screenshot.png" style="width:100%" onclick="showProject(this)" alt="Modified the University’s web-based inclusion learning tool; rewrote all the text and linked the scoring to the HR files of the University’s employees.
+">
+
+<h6> University of Reading
+</h6>
+
+  </div>
+
+  <div class="col-sm-3">  
+
+
+  </div>
 
 
 </div>
 
 </div>
 
-<div class="mySlides-Design ">
-  <div class="numbertext">3 / 3</div>
-<div class="row">
-  
-  <div class="col-sm-3">  <a href="/free-templates/Travel-Agency-Template.html" > <img src="/images/template-images/travel-screenshot.png" style="width:100%"> </a> </div>
-
-  <div class="col-sm-3">  </div>
-
-  <div class="col-sm-3">  </div>
-
-  <div class="col-sm-3">  </div>
-
-</div>
-   
-</div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>
 <a class="next" onclick="plusSlides(1)">❯</a>
@@ -302,10 +436,10 @@
 </div>
 <br>
 
-<div style="text-align:center">
+<div style="text-align:center;z-index:99!important">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
+
 </div>
 
 
@@ -324,7 +458,39 @@
 
 
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+<div class="row" style="margin:0px">
+
+
+<div class="col-sm-8">
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+
+
+</div>
+
+<div class="col-sm-4" >
+
+
+
+ <p id="description"></p>
+
+
+
+</div>
+
+</div>
+
+
+</div>
 
 <!-- Footer -->
 <footer >
@@ -363,7 +529,7 @@
 
   <div class="col-sm-3">  
 
-<h6 class="footer_title">LATEST BLOG </h6>
+<h6 class="footer_title">LATEST BLOGS & BULLETINS </h6>
 
          <br>
 
@@ -405,9 +571,9 @@
 
   <div class="col-sm-3" >  
 
-<h6 class="footer_title"> SIGN UP TO OUR NEWSLETTER </h6>
+<h6 class="footer_title"> SIGN UP TO OUR BULLETINS</h6>
 
-<p style="padding-bottom:20px;font-size:small;">Add your email below so we can update you on news and related articles.</p>
+<p style="padding-bottom:20px;font-size:small;">Missed us when you were away?  Add your email below so we can update you on news and related articles.</p>
 
 <form action="//sinopiainn.us12.list-manage.com/subscribe/post?u=bfd67fe6d111372ab18c5a6a4&amp;id=282315bb50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
@@ -442,7 +608,9 @@
 
 
 <script>
+
 var slideIndex = 1;
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -450,12 +618,19 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
+
+
+
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
+
+
   var i;
   var slides = document.getElementsByClassName("mySlides-Design");
+
+  
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -468,6 +643,31 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("description");
+
+function showProject(obj){
+
+ 
+    modal.style.display = "block";
+    modalImg.src = obj.src;
+    captionText.innerHTML = obj.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+
 </script>
 
 
@@ -476,8 +676,6 @@ function showSlides(n) {
 
 
 </script>
-
-<script src="/javascripts/main.js" ></script>
 
 <script src="/bootstrap/dist/js/bootstrap.min.js" ></script>
 

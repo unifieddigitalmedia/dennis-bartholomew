@@ -1,6 +1,6 @@
 .iconset img {width:30px ; height:30px;}
 
-.fa-search { cursor:pointer;color:black!important;
+.fa-search { cursor:pointer;color:black!important;margin-top:40px;position:relative;
 
 }
 
@@ -80,8 +80,8 @@ padding:30px 30px 0px 30px;
 
 .about-us-home-page-col p{
 
-font-size:200%;
-font-weight:300;
+font-size:120%;
+font-weight:bold;
 color:white;
 padding:30px;
 
@@ -151,8 +151,8 @@ padding:10px 10px 0px 10px;
 
 .specialist-overview-area-section h1{
 
-font-size:400%;
-font-weight:300;
+font-size:200%;
+
 color:black;
 padding:30px 30px 0px 30px;
 
@@ -161,18 +161,25 @@ padding:30px 30px 0px 30px;
 
 .specialist-overview-area-section h2{
 
-font-size:400%;
-font-weight:300;
+font-size:200%;
+
 color:black;
 padding:30px 30px 0px 30px;
 
 }
 
-
-.specialist-overview-area-section p{
+.specialist-overview-area-section h6{
 
 font-size:200%;
-font-weight:300;
+font-weight:bold;
+color:black;
+padding:30px 30px 0px 30px;
+
+}
+.specialist-overview-area-section p{
+
+font-size:100%;
+
 color:black;
 padding:30px 30px 5px 30px;
 
@@ -196,8 +203,7 @@ padding:30px 30px 30px 30px;
 
 .contact-area-section h1{
 
-font-size:300%;
-font-weight:300;
+
 color:black;
 padding:30px 30px 0px 30px;
 
@@ -206,10 +212,19 @@ padding:30px 30px 0px 30px;
 
 .contact-area-section h3{
 
-font-size:200%;
-font-weight:300;
+font-size:100%;
+
 color:black;
 
+
+}
+
+.contact-area-section h6{
+
+font-size:200%;
+font-weight:100!important;
+color:black;
+padding:30px 30px 0px 30px;
 
 }
 
@@ -233,6 +248,11 @@ background-color: #f0f0f1;padding:30px; border-radius:5px;
 
 }
 
+.mySlides-Design {
+
+text-align:center;
+
+}
 .blog-area-section{
 
 
@@ -279,7 +299,7 @@ padding:30px;
 
 background-image:url("../images/10131252-Business-group-showing-ethnic-diversity-in-a-meeting-Stock-Photo.jpg"); background-repeat: no-repeat;background-size:cover;
 
-height:200px;
+height:400px!important;
 
 
 }
@@ -351,7 +371,7 @@ ul.how-it-works {list-style-type:decimal;}
 
 ul.topnav li.icon {display: none;margin-top:20px;}
 /*ul.topnav li:first-child{ width:60%; text-align: left !important; }*/
-ul.topnav li:first-child{ width:55%;text-align: left !important;}
+ul.topnav li:first-child{ width:45%;text-align: left !important;}
 
 ul.topnav li { display: inline-block;  vertical-align:middle; }
 
@@ -620,6 +640,13 @@ padding:10px 10px 0px 10px;
 
 }
 
+.examples-welcome-section img {
+
+
+cursor:pointer!important;
+
+}
+
 
 .specialist-overview-area-section h1{
 
@@ -688,8 +715,6 @@ color:black;
 
 
 
-}
-
 @media screen and (max-width:1080px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
@@ -706,3 +731,5 @@ color:black;
     text-align: left;
   }
 }
+
+
