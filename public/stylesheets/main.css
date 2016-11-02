@@ -371,7 +371,7 @@ ul.how-it-works {list-style-type:decimal;}
 
 ul.topnav li.icon {display: none;margin-top:20px;}
 /*ul.topnav li:first-child{ width:60%; text-align: left !important; }*/
-ul.topnav li:first-child{ width:45%;text-align: left !important;}
+ul.topnav li:first-child{ width:60%;text-align: left !important;}
 
 ul.topnav li { display: inline-block;  vertical-align:middle; }
 
